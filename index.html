@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Discord Бот</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6a0dad;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #6a0dad;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #6a0dad;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #4e0781;
+        }
+        form {
+            margin-top: 20px;
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #4e0781;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на страницу моего Discord бота!</h1>
+    </header>
+    <div class="container">
+        <h2>О боте</h2>
+        <p>Этот Discord бот создан для улучшения вашего опыта общения в Discord. Он имеет множество функций, которые помогут вам управлять вашим сервером и развлечь участников.</p>
+        <a href="https://discord.com/api/oauth2/authorize?client_id=1229056660908150886&permissions=2147863553&scope=applications.commands%20bot" class="btn">Добавить бота в Discord</a>
+
+        <h2>Свяжитесь со мной</h2>
+        <form action="#" method="post">
+            <div>
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Отправить">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
