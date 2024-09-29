@@ -48,6 +48,17 @@
             100% { text-shadow: 0 0 5px #66ff33; }
         }
 
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 10px #66ff33; }
+            50% { text-shadow: 0 0 30px #99ff33; }
+            100% { text-shadow: 0 0 10px #66ff33; }
+        }
+
         .bot-avatar {
             width: 150px;
             height: 150px;
@@ -97,6 +108,11 @@
 
         .advantages ul li {
             padding: 10px 0;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         .team .member {
@@ -171,6 +187,12 @@
 
         footer a:hover {
             color: #ccff99;
+        }
+
+        @keyframes linkGlow {
+            0% { text-shadow: 0 0 5px #99ff33; }
+            50% { text-shadow: 0 0 15px #ccff99; }
+            100% { text-shadow: 0 0 5px #99ff33; }
         }
 
     </style>
