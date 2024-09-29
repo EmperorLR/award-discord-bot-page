@@ -3,97 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой Discord Бот</title>
+    <title>Kazino Discord Bot</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #004d00;
+            color: white;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
         header {
-            background-color: #6a0dad;
-            color: white;
-            padding: 20px 0;
+            background: linear-gradient(145deg, #007f0e, #004d00);
+            padding: 20px;
             text-align: center;
         }
-        .container {
-            width: 80%;
-            margin: 20px auto;
+
+        header h1 {
+            font-size: 48px;
+            color: #ccff99;
+            text-shadow: 0 0 10px #99ff33;
+        }
+
+        .shimmer {
+            text-align: center;
+            font-size: 24px;
+            color: #99ff33;
+            text-shadow: 0 0 15px #66ff33;
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { text-shadow: 0 0 5px #66ff33; }
+            50% { text-shadow: 0 0 20px #ccff99; }
+            100% { text-shadow: 0 0 5px #66ff33; }
+        }
+
+        .advantages {
+            background-color: #003300;
+            border-radius: 10px;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
         }
-        h1 {
-            color: #6a0dad;
+
+        .advantages h2 {
+            color: #ccff99;
         }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #6a0dad;
-            color: white;
+
+        .advantages ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .advantages ul li {
+            padding: 10px 0;
+        }
+
+        .team {
+            background-color: #003300;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .team h2 {
+            color: #ccff99;
+        }
+
+        .team .member {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: linear-gradient(145deg, #004d00, #003300);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        footer a {
+            color: #99ff33;
             text-decoration: none;
-            border-radius: 5px;
+            font-size: 18px;
+            margin: 0 15px;
         }
-        .btn:hover {
-            background-color: #4e0781;
+
+        footer a:hover {
+            color: #ccff99;
         }
-        form {
-            margin-top: 20px;
-        }
-        form div {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        input[type="submit"] {
-            background-color: #6a0dad;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #4e0781;
-        }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать на страницу моего Discord бота!</h1>
+        <h1>Kazino Discord Bot</h1>
+        <p class="shimmer">Готов испытать свою удачу? Присоединяйся к игре!</p>
     </header>
-    <div class="container">
-        <h2>О боте</h2>
-        <p>Этот Discord бот создан для улучшения вашего опыта общения в Discord. Он имеет множество функций, которые помогут вам управлять вашим сервером и развлечь участников.</p>
-        <a href="https://discord.com/api/oauth2/authorize?client_id=1229056660908150886&permissions=2147863553&scope=applications.commands%20bot" class="btn">Добавить бота в Discord</a>
 
-        <h2>Свяжитесь со мной</h2>
-        <form action="#" method="post">
-            <div>
-                <label for="name">Имя</label>
-                <input type="text" id="name" name="name" required>
+    <div class="container">
+        <section class="description">
+            <h2>Описание</h2>
+            <p>Kazino — это уникальный бот для Discord, который привносит азарт и элементы случайности в вашу экономику сервера. 
+            Открой для себя мир увлекательных игр и возможностей, где каждый может испытать удачу и получить крупный выигрыш. Экономика,
+            игры на удачу и масса возможностей — всё это Kazino!</p>
+        </section>
+
+        <section class="advantages">
+            <h2>Плюсы Kazino</h2>
+            <ul>
+                <li>🎰 Уникальные азартные игры прямо в Discord</li>
+                <li>💸 Экономика, завязанная на случайности и удаче</li>
+                <li>📊 Множество возможностей для заработка виртуальных валют</li>
+                <li>🤝 Поддержка множества серверов и кастомизация</li>
+                <li>⚡️ Быстрый и простой в настройке</li>
+            </ul>
+        </section>
+
+        <section class="team">
+            <h2>Команда Kazino</h2>
+            <div class="member">
+                <h3>Александр - Основатель и Разработчик</h3>
+                <p>Разработчик Kazino, следящий за тем, чтобы бот приносил только лучшее игровое удовольствие и функциональность.</p>
             </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+            <div class="member">
+                <h3>Мария - Менеджер сообщества</h3>
+                <p>Обеспечивает активную поддержку пользователей, отвечает за обратную связь и улучшения.</p>
             </div>
-            <div>
-                <label for="message">Сообщение</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <div>
-                <input type="submit" value="Отправить">
-            </div>
-        </form>
+        </section>
     </div>
+
+    <footer>
+        <p>
+            <a href="https://discord.com/oauth2/authorize?client_id=Ваш_ID&scope=bot&permissions=8">Добавить Kazino на свой сервер</a> |
+            <a href="https://discord.gg/Ваш_сервер">Поддержка</a> |
+            <a href="https://ваш_сайт/документация">Документация</a>
+        </p>
+    </footer>
 </body>
 </html>
