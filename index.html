@@ -24,6 +24,7 @@
             background: linear-gradient(145deg, #007f0e, #004d00);
             padding: 20px;
             text-align: center;
+            position: relative;
         }
 
         header h1 {
@@ -46,14 +47,45 @@
             100% { text-shadow: 0 0 5px #66ff33; }
         }
 
-        .advantages {
+        .bot-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .add-bot-button {
+            display: inline-block;
+            background-color: #99ff33;
+            color: #004d00;
+            padding: 15px 30px;
+            font-size: 24px;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 20px;
+            animation: pulse 1.5s infinite;
+        }
+
+        .add-bot-button:hover {
+            background-color: #ccff99;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 5px #66ff33; }
+            50% { box-shadow: 0 0 20px #99ff33; }
+            100% { box-shadow: 0 0 5px #66ff33; }
+        }
+
+        .advantages, .team, .reviews {
             background-color: #003300;
             border-radius: 10px;
             padding: 20px;
             margin: 20px 0;
         }
 
-        .advantages h2 {
+        .advantages h2, .team h2, .reviews h2 {
             color: #ccff99;
         }
 
@@ -66,18 +98,17 @@
             padding: 10px 0;
         }
 
-        .team {
-            background-color: #003300;
-            border-radius: 10px;
-            padding: 20px;
-        }
-
-        .team h2 {
-            color: #ccff99;
-        }
-
         .team .member {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .team .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
         }
 
         .reviews {
@@ -130,8 +161,11 @@
 </head>
 <body>
     <header>
+    <header>
         <h1>Kazino Discord Bot</h1>
         <p class="shimmer">Готов испытать свою удачу? Присоединяйся к игре!</p>
+        <img src="https://media.discordapp.net/attachments/1230257684238958666/1289963477338947666/3.jpg?ex=66fabb9b&is=66f96a1b&hm=f83a8944d15cdaea889fa8c4d2ec79c95b87edb7b82ee75d803e1f7a206b9344&=&format=webp&width=288&height=288" alt="Kazino Bot" class="bot-avatar">
+        <a href="https://discord.com/oauth2/authorize?client_id=1245427876002660442" class="add-bot-button">Добавить бота</a>
     </header>
 
     <div class="container">
@@ -156,19 +190,25 @@
         <section class="team">
             <h2>Команда Kazino</h2>
             <div class="member">
-                <h3>emperor_ds - Основатель и Разработчик</h3>
-                <img src="https://images-ext-1.discordapp.net/external/Oa2HSPVSkCYiRx3XdbmmkM4yPlyf5vS5D4BKHP4w85s/https/cdn.discordapp.com/avatars/741662939463024650/6ef6992d17ffe9f29210bfdff6f566d9.png?format=webp&quality=lossless&width=288&height=288" alt="emperor_ds" width="100">
-                <p>Разработчик Kazino, следящий за тем, чтобы бот приносил только лучшее игровое удовольствие и функциональность.</p>
+                <img src="https://images-ext-1.discordapp.net/external/Oa2HSPVSkCYiRx3XdbmmkM4yPlyf5vS5D4BKHP4w85s/https/cdn.discordapp.com/avatars/741662939463024650/6ef6992d17ffe9f29210bfdff6f566d9.png?format=webp&quality=lossless&width=288&height=288" alt="Разработчик">
+                <div>
+                    <h3>emperor_ds - Основатель и Разработчик</h3>
+                    <p>Разработчик Kazino, следящий за тем, чтобы бот приносил только лучшее игровое удовольствие и функциональность.</p>
+                </div>
             </div>
             <div class="member">
-                <h3>flyweather - Администратор</h3>
-                <img src="https://images-ext-1.discordapp.net/external/tWvslLLItVi5_5zh1x56BaEWZ3-53aWuojT9-Rk-gUg/https/cdn.discordapp.com/avatars/1017906450925887549/706eaf8d1260ea52305af6e5dad8c260.png?format=webp&quality=lossless&width=288&height=288" alt="flyweather" width="100">
-                <p>Администратор Kazino, правая рука разработчика. Осуществляет контроль за всем что связано с Kazino.</p>
+                <img src="https://images-ext-1.discordapp.net/external/tWvslLLItVi5_5zh1x56BaEWZ3-53aWuojT9-Rk-gUg/https/cdn.discordapp.com/avatars/1017906450925887549/706eaf8d1260ea52305af6e5dad8c260.png?format=webp&quality=lossless&width=288&height=288" alt="Администратор">
+                <div>
+                    <h3>flyweather - Администратор</h3>
+                    <p>Администратор Kazino, правая рука разработчика. Осуществляет контроль за всем что связано с Kazino.</p>
+                </div>
             </div>
             <div class="member">
-                <h3>GolkRade - Менеджер сообщества</h3>
-                <img src="https://images-ext-1.discordapp.net/external/bzQPSVA8HekDRh1xFQB-EPC8OOn2XVcHTdRBI_MbbCM/https/cdn.discordapp.com/avatars/1248229450785755198/81f899540a2741f467df9fc2513ad5a9.png?format=webp&quality=lossless&width=288&height=288" alt="GolkRade" width="100">
-                <p>Обеспечивает активную поддержку пользователей, отвечает за обратную связь и улучшения.</p>
+                <img src="https://images-ext-1.discordapp.net/external/bzQPSVA8HekDRh1xFQB-EPC8OOn2XVcHTdRBI_MbbCM/https/cdn.discordapp.com/avatars/1248229450785755198/81f899540a2741f467df9fc2513ad5a9.png?format=webp&quality=lossless&width=288&height=288" alt="Менеджер сообщества">
+                <div>
+                    <h3>GolkRade - Менеджер сообщества</h3>
+                    <p>Обеспечивает активную поддержку пользователей, отвечает за обратную связь и улучшения.</p>
+                </div>
             </div>
         </section>
 
